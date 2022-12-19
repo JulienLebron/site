@@ -1,0 +1,27 @@
+/***************************************************
+                GENERAL
+***************************************************/
+:root { --black: #000; --gold: #FFD700; --white: #fff; --blue: #04baf6; }
+* {margin: 0; font-family: 'Roboto', sans-serif;}
+a {text-decoration: none; color: var(--black); }
+.conteneur { margin: 0 auto; max-width: 1170px; }
+a:hover { color: var(--gold); }
+button a { color: var(--white); }
+h1,h2,h3 { font-family: 'Lato', sans-serif; font-weight: 700; }
+/***************************************************
+                HAUT
+***************************************************/
+header { background: var(--black); padding: 5px; text-align: center; }
+header span { color: var(--white); font-weight: bold; text-transform: uppercase; margin-right: 5%; }
+header span a:hover { background: var(--blue); color: var(--gold); }
+header nav { display: inline; }
+header a { color: var(--white); text-decoration: none; padding: 5px; }
+header nav a:hover { background: var(--blue); color: var(--gold); }
+/***************************************************
+                MILIEU
+***************************************************/
+section {padding: 30px; min-height: 865px; }
+/***************************************************
+                BAS
+***************************************************/
+footer { background: var(--black); color: var(--white); text-align: center; padding: 7px 0; }
