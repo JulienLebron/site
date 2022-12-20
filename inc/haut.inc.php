@@ -19,10 +19,29 @@
                 <a href="<?= RACINE_SITE; ?>boutique.php">Monsite.com</a>
             </span>
             <nav>
-                <a href="<?= RACINE_SITE; ?>inscription.php">Inscription</a>
-                <a href="<?= RACINE_SITE; ?>connexion.php">Connexion</a>
-                <a href="<?= RACINE_SITE; ?>boutique.php">Boutique</a>
-                <a href="<?= RACINE_SITE; ?>panier.php">Panier</a>
+               <?php
+                if(internauteEstConnecteEtEstAdmin())
+                {
+                    echo '<a href="' . RACINE_SITE . 'admin/gestion_membre.php">Gestion des membres</a>';
+                    echo '<a href="' . RACINE_SITE . 'admin/gestion_commande.php">Gestion des commandes</a>';
+                    echo '<a href="' . RACINE_SITE . 'admin/gestion_boutique.php">Gestion des produits</a>';
+                }
+
+                if(internauteEstConnecte())
+                {
+                    echo '<a href="' . RACINE_SITE . 'profil.php">Profil</a>';
+                    echo '<a href="' . RACINE_SITE . 'panier.php">Panier</a>';
+                    echo '<a href="' . RACINE_SITE . 'connexion.php?action=deconnexion">Se déconnecter</a>';
+                }
+                else
+                {
+                    echo '<a href="' . RACINE_SITE . 'boutique.php">Accueil</a>';
+                    echo '<a href="' . RACINE_SITE . 'inscription.php">Inscription</a>';
+                    echo '<a href="' . RACINE_SITE . 'connexion.php">Connexion</a>';
+                    echo '<a href="' . RACINE_SITE . 'panier.php">Panier</a>';
+                }
+
+                ?>
             </nav>
         </div>
     </header>

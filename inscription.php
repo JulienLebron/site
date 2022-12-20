@@ -40,7 +40,7 @@ if($_POST)
 require_once 'inc/haut.inc.php';
 ?>
 
-<div class="jumbotron text-center">
+<div class="jumbotron text-center mt-4">
     <h2>INSCRIPTION</h2>
 </div>
 <?php
@@ -88,7 +88,7 @@ echo $contenu;
                     <label for="adresse" class="form-label">Adresse</label>
                     <textarea name="adresse" id="adresse" cols="30" rows="5" placeholder="🏡 Indiquer votre adresse" class="form-control"></textarea>
                 </div>
-                <div class="mb-3 text-center mt-4">
+                <div class="mb-3 text-center mt-5">
                     <button type="submit" class="btn btn-primary btn-lg">S'incrire ✅</button>
                 </div>
             </form>
