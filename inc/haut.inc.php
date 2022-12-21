@@ -16,7 +16,7 @@
     <header>
         <div class="conteneur">
             <span>
-                <a href="<?= RACINE_SITE; ?>boutique.php">Monsite.com</a>
+                <a href="<?= RACINE_SITE; ?>index.php">Monsite.com</a>
             </span>
             <nav>
                <?php
@@ -35,7 +35,7 @@
                 }
                 else
                 {
-                    echo '<a href="' . RACINE_SITE . 'boutique.php">Accueil</a>';
+                    echo '<a href="' . RACINE_SITE . 'index.php">Accueil</a>';
                     echo '<a href="' . RACINE_SITE . 'inscription.php">Inscription</a>';
                     echo '<a href="' . RACINE_SITE . 'connexion.php">Connexion</a>';
                     echo '<a href="' . RACINE_SITE . 'panier.php">Panier</a>';
