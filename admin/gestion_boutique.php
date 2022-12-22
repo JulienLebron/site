@@ -41,10 +41,8 @@ if(!empty($_POST))
     {
         $_POST[$indice] = htmlentities(addslashes($valeur));
     }
-    if(empty($_POST['id_produit']))
+    if(!empty($_POST['id_produit']))
     {
-        $_POST['id_produit'] = 'NULL';
-        debug($_POST);
         executeRequete("REPLACE INTO produit (id_produit, reference, categorie, titre, description, couleur, taille, public, photo, prix, stock) VALUES ('$_POST[id_produit]', '$_POST[reference]', '$_POST[categorie]', '$_POST[titre]', '$_POST[description]', '$_POST[couleur]', '$_POST[taille]', '$_POST[public]', '$photo_bdd', '$_POST[prix]', '$_POST[stock]')");
     }
     $contenu .= '<div class="alert alert-success text-center">✅ Le produit à bien été enregistrer en base de données !</div>';

@@ -92,7 +92,7 @@ function montantTotal()
     {
         $total += $_SESSION['panier']['quantite'][$i] * $_SESSION['panier']['prix'][$i];
     }
-    return $total;
+    return round($total, 2);
 }
 //-------------------------------------------------
 function retirerProduitPanier($id_produit_a_supprimer)
@@ -104,5 +104,6 @@ function retirerProduitPanier($id_produit_a_supprimer)
         array_splice($_SESSION['panier']['id_produit'], $position_produit, 1);
         array_splice($_SESSION['panier']['quantite'], $position_produit, 1);
         array_splice($_SESSION['panier']['prix'], $position_produit, 1);
+        array_splice($_SESSION['panier']['photo'], $position_produit, 1);
     }
 }
